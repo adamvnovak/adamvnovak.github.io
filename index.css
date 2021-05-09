@@ -35,9 +35,8 @@ body {
   }
 
 #content {
-  padding: 20px;
+  padding: 10px;
   padding-top: 10px;
-  padding-left: 20px;
   margin: 20px;
   margin-bottom: 80px;
   border: 7px solid rgb(75, 46, 46);
@@ -85,7 +84,7 @@ body {
   margin-top: 20px;
 }
 
-#connect-buttons a:hover, #connect-buttons a:active {
+#connect-buttons a:hover {
   background-color: rgb(88, 41, 41);
   width: 95px;
   /*
