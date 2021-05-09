@@ -1,0 +1,125 @@
+* {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+*:focus {
+    outline:none;
+  }
+
+#profile-image {
+  clip-path: circle();
+  margin: auto;
+}
+
+body {
+  background-color: rgb(75, 46, 46);
+}
+
+#app {
+    max-width: 850px;
+    margin: auto;
+    background-color: rgb(32, 32, 32);
+    border-radius: 20px;
+}
+
+#header {
+  padding: 40px;
+  padding-top: 35px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+    
+  }
+
+#content {
+  padding: 30px;
+  padding-left: 50px;
+  margin: 20px;
+  margin-bottom: 80px;
+  border: 7px solid rgb(75, 46, 46);
+  background-color: rgb(39, 39, 39);
+  text-align: left;
+  border-radius: 10px;
+  max-width: 85%;
+
+}
+
+#footer {
+  margin: 30px;
+}
+
+#connect {
+  margin: 20px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  max-width: 95%;
+  border: 7px solid rgb(75, 46, 46);
+  background-color: rgb(39, 39, 39);
+  border-radius: 10px;
+
+
+}
+
+#connect-buttons {
+  margin: auto;
+  margin-left: 0px;
+}
+
+#connect-buttons a {
+  padding: 20px 0;
+  padding-bottom: 20px;
+  width: 88px;
+  height: 110px;
+  vertical-align: top;
+  display: inline-block;
+  color: white;
+  transition: width 2s, height 2s, transform 2s background-color 2s ease-in-out;
+  transition-duration: 0.5s;
+}
+
+.connect-description {
+  margin-top: 20px;
+}
+
+#connect-buttons a:hover, #connect-buttons a:active {
+  background-color: rgb(88, 41, 41);
+  width: 95px;
+  /*
+  transform: rotate(360deg);
+  */
+}
+
+.social-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+#pics {
+  margin: 80px auto;
+}
+
+.collage {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+
+.collage img {
+  max-width: 300px;
+  height: auto;
+  margin-top: 10px;
+}
+
+.column {
+  flex: 50%;
+}
+
+h1 {
+    font-size: 60px;
+}
+h2 {
+    font-size: 30px;
+}
