@@ -9,6 +9,11 @@
     outline:none;
   }
 
+mark.blue {
+    color:#0000A0;
+    background: none;
+}
+
 #profile-image {
   clip-path: circle();
   margin: auto;
