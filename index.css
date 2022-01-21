@@ -13,6 +13,23 @@ mark.blue {
   
 }
 
+h3 {
+  text-align: start;
+}
+ul {
+  margin: 0;
+  padding-left: 10px;
+}
+li {
+  text-align: start;
+
+}
+
+h4 {
+  text-align: start;
+  margin-bottom: 5px;
+}
+
 #profile-image {
   clip-path: circle();
   margin: auto;
@@ -41,10 +58,12 @@ body {
   }
 
 #content {
-  padding: 20px;
+  padding: 5%;
   padding-top: 10px;
   padding-bottom: 30px;
-  margin:  max(2px, 3%);
+  /* margin:  clamp(2px, 3%, 50%); */
+  /* margin: max(10px, 8%); */
+  margin: auto;
   /* margin: 0; */
   /* margin: 10px; */
   margin-bottom: 50px;
@@ -52,7 +71,7 @@ body {
   background-color: rgb(39, 39, 39);
   text-align: left;
   border-radius: 10px;
-  width: auto;
+  width: 75%;
 }
 
 #footer {
@@ -64,7 +83,8 @@ body {
   padding: 10px;
   padding-top: 10px;
   padding-bottom: 30px;
-  max-width: 95%;
+  margin: auto;
+  max-width: 90%;
   border: 7px solid rgb(75, 46, 46);
   background-color: rgb(39, 39, 39);
   border-radius: 10px;
