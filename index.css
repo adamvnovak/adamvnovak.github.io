@@ -28,6 +28,7 @@ li {
 h4 {
   text-align: start;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 #profile-image {
@@ -71,7 +72,8 @@ body {
   background-color: rgb(39, 39, 39);
   text-align: left;
   border-radius: 10px;
-  width: 75%;
+  width: 80%;
+  max-width: 600px;
 }
 
 #footer {
@@ -79,12 +81,15 @@ body {
 }
 
 #connect {
-  margin: 20px;
+  margin: auto;
   padding: 10px;
   padding-top: 10px;
   padding-bottom: 30px;
   margin: auto;
-  max-width: 90%;
+  /* max-width: 90%; */
+  width: 85%;
+  max-width: 450px;
+
   border: 7px solid rgb(75, 46, 46);
   background-color: rgb(39, 39, 39);
   border-radius: 10px;
