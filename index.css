@@ -99,35 +99,41 @@ body {
 #connect-buttons {
   margin: auto;
   margin-left: 0px;
+  
 }
 
 #connect-buttons a {
   padding: 20px 0;
   padding-bottom: 20px;
-  width: 88px;
-  height: 110px;
+  width: 150px;
+  height: 125px;
   vertical-align: top;
   display: inline-block;
   color: white;
   transition: width 2s, height 2s, transform 2s background-color 2s ease-in-out;
-  transition-duration: 0.5s;
+  transition-duration: 1s;
+  padding-bottom: 20px;
 }
 
 .connect-description {
+  margin: 0 auto;
   margin-top: 20px;
+  padding-bottom: 50px;
+  width: 150px;
 }
+
 
 #connect-buttons a:hover {
   background-color: rgb(88, 41, 41);
-  width: 95px;
-  /*
-  transform: rotate(360deg);
-  */
+  width: 180px;
+  /* height: 150px; */
+  /* height: 110%; */
+  /* transform: rotate(10deg); */
 }
 
 .social-image {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     border-radius: 5px;
 }
 
