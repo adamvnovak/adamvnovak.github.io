@@ -7,12 +7,41 @@ a{color:#3391ff;}
 ::selection{background-color:#004daa!important;color:#e8e6e3!important;}
 }
 /*! CSS Used from: https://patrickcollison.com/static/style.css */
+h3 {
+  padding-top: 15px;
+  font-size: large;
+}
 body{font-family:Helvetica;font-size:13px;}
-#menu{float:right;margin-top:30px;margin-right:20px;text-align:right;width:150px;font-family:"Myriad Pro", "Helvetica Neue", Helvetica;}
+#menu{
+  float:right;
+  margin-top:30px;
+  margin-right:20px;
+  text-align:right;
+  width:150px;
+  font-family:"Myriad Pro", "Helvetica Neue", Helvetica;
+  font-size: larger;
+}
 #menu ul{list-style-type:none;margin:0;padding:0;}
 #menu li a{display:inline-block;color:#0864c7;}
-#left{height:1px;float:left;display:block;min-width:0;overflow:hidden;width:200px;margin:0;padding:0;}
-#content{margin-top:15px;float:left;width:500px;}
+#left{
+  height:1px;
+  float:left;
+  display:block;
+  min-width:0;
+  overflow:hidden;
+  width:200px;
+  margin:0;
+  padding:0;
+  /* padding-left: 100px;
+  margin-left: 20px; */
+}
+#content{
+  margin-top:15px;
+  float:left;
+  max-width:500px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
 #content h3{font-family:"Myriad Pro", "Helvetica Neue", Helvetica;margin:0;}
 #content p,#content ul{color:#333;line-height:18px;}
 #content p.notop{margin-top:0;}
