@@ -1,167 +1,28 @@
-* {
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+body{background-color:#181a1b;}
+body{border-color:#736b5e;color:#e8e6e3;}
+a{color:#3391ff;}
+::placeholder{color:#b2aba1;}
+::selection{background-color:#004daa!important;color:#e8e6e3!important;}
 }
-
-*:focus {
-    outline:none;
-  }
-
-mark.blue {
-  
+/*! CSS Used from: https://patrickcollison.com/static/style.css */
+body{font-family:Helvetica;font-size:13px;}
+#menu{float:right;margin-top:30px;margin-right:20px;text-align:right;width:150px;font-family:"Myriad Pro", "Helvetica Neue", Helvetica;}
+#menu ul{list-style-type:none;margin:0;padding:0;}
+#menu li a{display:inline-block;color:#0864c7;}
+#left{height:1px;float:left;display:block;min-width:0;overflow:hidden;width:200px;margin:0;padding:0;}
+#content{margin-top:15px;float:left;width:500px;}
+#content h3{font-family:"Myriad Pro", "Helvetica Neue", Helvetica;margin:0;}
+#content p,#content ul{color:#333;line-height:18px;}
+#content p.notop{margin-top:0;}
+#content li{margin-bottom:0.7em;}
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+#menu li a{color:rgb(87, 175, 248);}
+#content p,#content ul{color:rgb(200, 195, 188);}
 }
-
-h3 {
-  text-align: start;
-}
-ul {
-  margin: 0;
-  padding-left: 10px;
-}
-li {
-  text-align: start;
-
-}
-
-h4 {
-  text-align: start;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-#profile-image {
-  clip-path: circle();
-  margin: auto;
-}
-
-body {
-  background-color: rgb(75, 46, 46);
-  padding: 5px;
-}
-
-#app {
-    max-width: 850px;
-    width: 97%;
-    margin: auto;
-    background-color: rgb(32, 32, 32);
-    border-radius: 20px;
-}
-
-#header {
-  padding: 20px;
-  padding-top: 30px;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-    
-  }
-
-#content {
-  padding: 5%;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  /* margin:  clamp(2px, 3%, 50%); */
-  /* margin: max(10px, 8%); */
-  margin: auto;
-  /* margin: 0; */
-  /* margin: 10px; */
-  margin-bottom: 50px;
-  border: 7px solid rgb(75, 46, 46);
-  background-color: rgb(39, 39, 39);
-  text-align: left;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 600px;
-}
-
-#footer {
-  margin: 30px;
-}
-
-#connect {
-  margin: auto;
-  padding: 10px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  margin: auto;
-  /* max-width: 90%; */
-  width: 85%;
-  max-width: 450px;
-
-  border: 7px solid rgb(75, 46, 46);
-  background-color: rgb(39, 39, 39);
-  border-radius: 10px;
-
-}
-
-#connect-buttons {
-  margin: auto;
-  margin-left: 0px;
-  
-}
-
-#connect-buttons a {
-  padding: 20px 0;
-  padding-bottom: 20px;
-  width: 150px;
-  height: 125px;
-  vertical-align: top;
-  display: inline-block;
-  color: white;
-  transition: width 2s, height 2s, transform 2s background-color 2s ease-in-out;
-  transition-duration: 1s;
-  padding-bottom: 20px;
-}
-
-.connect-description {
-  margin: 0 auto;
-  margin-top: 20px;
-  padding-bottom: 50px;
-  width: 150px;
-}
-
-
-#connect-buttons a:hover {
-  background-color: rgb(88, 41, 41);
-  width: 180px;
-  /* height: 150px; */
-  /* height: 110%; */
-  /* transform: rotate(10deg); */
-}
-
-.social-image {
-    width: 80px;
-    height: 80px;
-    border-radius: 5px;
-}
-
-#pics {
-  margin: 50px auto;
-  margin-bottom: 0;
-  padding: 10px;
-}
-
-.collage {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 10px;
-}
-
-.collage img {
-  max-width: 300px;
-  height: auto;
-  margin-top: 10px;
-}
-
-.column {
-  flex: 50%;
-}
-
-h1 {
-    font-size: 60px;
-}
-h2 {
-    font-size: 30px;
+/*! CSS Used from: Embedded ; media=screen */
+@media screen{
+::placeholder{opacity:0.5!important;}
 }
