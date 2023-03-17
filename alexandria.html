@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alexandria</title>
+  <link rel="stylesheet" href="alexandria.css">
+</head>
+<body>
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Search books">
+    <button id="searchButton">Search</button>
+  </div>
+  <div class="results-container" id="results"></div>
+  <script src="alexandria.js"></script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alexandria</title>
+<style>
+  body {font-family: Arial, sans-serif;}
+  .search-container {text-align: center; margin-top: 100px;}
+  .results-container {margin-top: 50px;}
+  .book {border: 1px solid #ccc; padding: 10px; margin-bottom: 10px;}
+</style>
+</head>
+<body>
+<div class="search-container">
+  <input type="text" id="search" placeholder="Search books">
+  <button onclick="searchBooks()">Search</button>
+</div>
+<div class="results-container" id="results"></div>
+<script>
+  async function searchBooks() {
+    const query = document.getElementById("search").value;
+    const url = `https://libgen-api.herokuapp.com/search/${query}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    displayResults(data);
+  }
+function displayResults(books) {
+const results = document.getElementById("results");
+results.innerHTML = "";
+books.forEach(book => {
+const bookDiv = document.createElement("div");
+bookDiv.classList.add("book");
+bookDiv.innerHTML = <h3>${book.title}</h3><p>Author: ${book.author}</p>;
+results.appendChild(bookDiv);
+});
+}
+</script>
+
+</body>
+</html> -->
