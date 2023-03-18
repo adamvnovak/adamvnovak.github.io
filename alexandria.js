@@ -20,7 +20,7 @@ document.getElementById("searchButton").addEventListener("click", searchBooks);
 // }
 
 async function searchBooks(query) {
-  const url = `https://libgen.lc/json.php?fields=Title,Author,Download&search=${encodeURIComponent(query)}`;
+  const url = `https://fathomless-wave-06104.herokuapp.com/https://libgen.lc/json.php?fields=Title,Author,Download&search=${encodeURIComponent(query)}`;
   const response = await fetch(url);
   const data = await response.json();
   displayResults(data);
