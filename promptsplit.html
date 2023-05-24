@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="promptsplit.css">
+    <title>Promptsplit</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Promptsplit</h1>
+        <form id="splitForm">
+            <label for="longText">Long Text Prompt:</label>
+            <textarea id="longText" rows="6" cols="50" placeholder="Enter your long text prompt here..."></textarea>
+            <label for="maxTokens">Max Tokens Limit:</label>
+            <input type="number" id="maxTokens" min="1" value="50">
+            <label for="realPrompt">Real Prompt:</label>
+            <input type="text" id="realPrompt" placeholder="Enter your real prompt here...">
+            <button type="submit">Split Prompts</button>
+        </form>
+        <h2>Split Prompts</h2>
+        <div id="results"></div>
+    </div>
+    <script src="promptsplit.js"></script>
+</body>
+</html>

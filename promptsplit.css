@@ -1,0 +1,77 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+#splitForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: block;
+  padding: 5px 0;
+}
+
+textarea, input {
+  width: 100%;
+  padding: 5px;
+}
+
+button {
+  margin: 10px 0;
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 5px 0;
+  width: 100%;
+}
+
+.result-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copyButton {
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  background-color: #555;
+}
