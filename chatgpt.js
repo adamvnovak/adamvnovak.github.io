@@ -16,7 +16,7 @@ async function sendRequestToOpenAI(text) {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer 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`,
+          "Authorization": `Bearer whatttttt-GInCC2kj3tBXqjT2nL3oT3BlbkFJnK4NPcMgns4ETSP1TieY`,
       },
       body: JSON.stringify({
           model: "gpt-4",
