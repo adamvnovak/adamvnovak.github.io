@@ -11,6 +11,10 @@ h3 {
   padding-top: 15px;
   font-size: x-large;
 }
+.bg-image
+{
+  width: 100%;
+}
 body{font-family:Helvetica;font-size:13px;}
 #center {
   max-width: 500px;
