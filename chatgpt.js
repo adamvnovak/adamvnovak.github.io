@@ -31,13 +31,9 @@ $(document).ready(function () {
   const chatBox = $("#chat-box");
   const userInput = $("#user-input");
   const sendBtn = $("#send-btn");
-  console.log(apikey)
 
   fetchAndActivate(remoteConfig).then(() => {
-    apikey = getValue(remoteConfig, "openai_apikey");
-    console.log(apikey);
-    apikey = apikey.asString();
-    console.log(apikey);
+    apikey = getValue(remoteConfig, "openai_apikey").asString();
   }).catch((err) => {
     console.log("OOPS", err)
   });
