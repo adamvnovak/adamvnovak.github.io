@@ -6,6 +6,7 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-color: darkslategray;
 }
 
 .chat-container {
@@ -80,7 +81,7 @@ button {
 }
 
 .assistant {
-  background-color: green;
+  background-color: darkgray;
   color: white;
   align-self: flex-start;
   border-bottom-left-radius: 0;

@@ -62,9 +62,10 @@ $(document).ready(function () {
             const codeElem = document.createElement('code');
             messageElement.appendChild(preElem);
             preElem.appendChild(codeElem);
-            codeElem.textContent = code.trim();
-            const firstLine = code.trim().split("\n")[0];
+            
+            const firstLine = code.split("\n")[0];
             codeElem.classList.add(`language-${firstLine}`);
+            codeElem.textContent = code.replace(firstLine + '\n', '');
             hljs.highlightBlock(codeElem);
         } else {
             messageElement.textContent = messageParts[i].trim();
