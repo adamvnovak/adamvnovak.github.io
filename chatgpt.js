@@ -35,6 +35,8 @@ $(document).ready(function () {
   fetchAndActivate(remoteConfig).then(() => {
     apikey = getValue(remoteConfig, "openai_apikey");
     console.log(apikey);
+    apikey = apikey.asString();
+    console.log(apikey);
   }).catch((err) => {
     console.log("OOPS", err)
   });
@@ -52,7 +54,7 @@ $(document).ready(function () {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${getValue(remoteConfig, "openai_apikey")}`,
+          "Authorization": `Bearer ${apikey}`,
       },
       body: JSON.stringify({
           model: "gpt-4",
