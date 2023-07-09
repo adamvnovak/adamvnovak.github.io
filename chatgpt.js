@@ -44,7 +44,7 @@ $(document).ready(function () {
     messageElement.classList.add('chat-bubble', sender);
 
     if (sender === "user") {
-      messageElement.textContent = messageParts[i].trim();
+      messageElement.textContent = text.trim();
     } else {
       const messageParts = text.split('```');
       for (let i = 0; i < messageParts.length; i++) {
