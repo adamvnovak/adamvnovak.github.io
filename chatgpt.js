@@ -52,7 +52,7 @@ $(document).ready(function () {
       method: "POST",
       headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${apikey}`,
+          "Authorization": `Bearer ${getValue(remoteConfig, "openai_apikey")}`,
       },
       body: JSON.stringify({
           model: "gpt-4",
