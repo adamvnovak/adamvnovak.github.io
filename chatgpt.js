@@ -30,6 +30,7 @@ $(document).ready(function () {
   const chatBox = $("#chat-box");
   const userInput = $("#user-input");
   const sendBtn = $("#send-btn");
+  console.log(apikey)
 
   remoteConfig.fetchAndActivate().then(() => {
     apikey = getValue(remoteConfig, "openai_apikey");
@@ -68,6 +69,7 @@ $(document).ready(function () {
   }
 
   function sendMessage() {
+    console.log(apikey)
     const text = userInput.val();
     if (text) {
       userInput.val('');
