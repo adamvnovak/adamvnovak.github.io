@@ -43,14 +43,27 @@ $(document).ready(function () {
   });
 
   function addMessage(text, sender) {
-    chatHistory.push({ role: sender, content: text })
-
+    chatHistory.push({ role: sender, content: text });
     const messageElement = document.createElement('div');
     messageElement.classList.add('chat-bubble', sender);
-    messageElement.textContent = text;
+  
+    if (text.trim().startsWith('```') && text.trim().endsWith('```')) {
+      const code = text.trim().slice(3, -3); 
+      const preElem = document.createElement('pre');
+      const codeElem = document.createElement('code');
+
+      messageElement.appendChild(preElem);
+      preElem.appendChild(codeElem);
+  
+      codeElem.textContent = code;
+      hljs.highlightBlock(codeElem);
+    } else {
+      messageElement.textContent = text;
+    }
+      
     chatBox.append(messageElement);
-    chatBox.scrollTop(chatBox[0].scrollHeight);
-  }  
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
 
   async function sendRequestToOpenAI(text) {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -61,6 +74,7 @@ $(document).ready(function () {
       },
       body: JSON.stringify({
           model: "gpt-4",
+          stream: true,
           messages: chatHistory,
       }),
     });
@@ -73,7 +87,6 @@ $(document).ready(function () {
   }
 
   function sendMessage() {
-    console.log(apikey)
     const text = userInput.val();
     if (text) {
       userInput.val('');
