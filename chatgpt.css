@@ -39,7 +39,7 @@ textarea {
   resize: vertical;
   overflow: auto;
   height: auto;
-  max-height: 100px;
+  max-height: 200px;
   width: 100%;
   box-sizing: border-box;
   white-space: pre-wrap;

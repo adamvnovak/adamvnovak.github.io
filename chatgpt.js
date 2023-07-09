@@ -40,35 +40,39 @@ $(document).ready(function () {
 
   function addMessage(text, sender) {
     chatHistory.push({ role: sender, content: text });
-    let messageElement = document.createElement('div');
-    messageElement.classList.add('chat-bubble', sender);
 
+    let messageElement;
     if (sender === "user") {
-      messageElement.textContent = text.trim();
-    } else {
-      const messageParts = text.split('```');
-      for (let i = 0; i < messageParts.length; i++) {
-          
-          // If index is odd, this part is a code snippet
-          if (i % 2 === 1) {
-              const code = messageParts[i];
-              const preElem = document.createElement('pre');
-              const codeElem = document.createElement('code');
-              messageElement.appendChild(preElem);
-              preElem.appendChild(codeElem);
-              codeElem.textContent = code.trim();
-  
-              // Apply syntax highlighting, if the library is available
-              if (typeof hljs !== 'undefined') {
-                  hljs.highlightBlock(codeElem);
-              }
-          } else {
-              messageElement.textContent = messageParts[i].trim();
-          }
-      }
+      messageElement = document.createElement('div');
+      messageElement.classList.add('chat-bubble', sender);
+      messageElement.textContent = text;
+      chatBox.append(messageElement);
+      return;
     }
-    
-    chatBox.append(messageElement);
+
+    const messageParts = text.split('```');
+    for (let i = 0; i < messageParts.length; i++) {
+        messageElement = document.createElement('div');
+        messageElement.classList.add('chat-bubble', sender);
+        
+        // If index is odd, this part is a code snippet
+        if (i % 2 === 1) {
+            const code = messageParts[i];
+            const preElem = document.createElement('pre');
+            const codeElem = document.createElement('code');
+            messageElement.appendChild(preElem);
+            preElem.appendChild(codeElem);
+            codeElem.textContent = code.trim();
+
+            // Apply syntax highlighting, if the library is available
+            if (typeof hljs !== 'undefined') {
+                hljs.highlightBlock(codeElem);
+            }
+        } else {
+            messageElement.textContent = messageParts[i].trim();
+        }
+        chatBox.append(messageElement);
+    }
     chatBox.scrollTop(chatBox[0].scrollHeight);
 }
 
