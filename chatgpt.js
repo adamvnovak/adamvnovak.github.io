@@ -74,8 +74,8 @@ $(document).ready(function () {
       },
       body: JSON.stringify({
           model: "gpt-4",
-          stream: true,
-          messages: chatHistory,
+          messages: chatHistory
+          // stream: true,
       }),
     });
     const data = await response.json();
