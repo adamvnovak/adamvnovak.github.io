@@ -63,11 +63,9 @@ $(document).ready(function () {
             messageElement.appendChild(preElem);
             preElem.appendChild(codeElem);
             codeElem.textContent = code.trim();
-
-            // Apply syntax highlighting, if the library is available
-            if (typeof hljs !== 'undefined') {
-                hljs.highlightBlock(codeElem);
-            }
+            const firstLine = code.trim().split("\n")[0];
+            codeElem.classList.add(`language-${firstLine}`);
+            hljs.highlightBlock(codeElem);
         } else {
             messageElement.textContent = messageParts[i].trim();
         }

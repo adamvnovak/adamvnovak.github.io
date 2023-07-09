@@ -57,9 +57,10 @@ button {
 
 .chat-bubble {
   display: inline-block;
-  padding: 10px;
+  padding: 5px;
   border-radius: 10px;
-  font: 10px Arial, sans-serif;
+  font: 15px Arial, sans-serif;
+  font-weight: 300;
   margin: 5px;
   max-width: 70%;
   word-wrap: break-word;
