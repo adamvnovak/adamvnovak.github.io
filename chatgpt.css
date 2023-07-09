@@ -30,7 +30,7 @@ body {
   padding: 10px;
 }
 
-input {
+textarea {
   flex-grow: 1;
   border: none;
   outline: none;
@@ -38,7 +38,7 @@ input {
   font-size: 16px;
   resize: vertical;
   overflow: auto;
-  height:auto;
+  height: auto;
   max-height: 100px;
   width: 100%;
   box-sizing: border-box;
