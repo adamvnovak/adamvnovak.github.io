@@ -2,7 +2,8 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-analytics.js";
-import { getRemoteConfig, fetchAndActivate } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-remote-config.js";
+import { getRemoteConfig } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-remote-config.js";
+import { fetchAndActivate } from 'https://www.gstatic.com/firebasejs/10.0.0/firebase-remote-config.js';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -32,9 +33,11 @@ $(document).ready(function () {
   const sendBtn = $("#send-btn");
   console.log(apikey)
 
-  remoteConfig.fetchAndActivate().then(() => {
+  fetchAndActivate(remoteConfig).then(() => {
     apikey = getValue(remoteConfig, "openai_apikey");
     console.log(apikey);
+  }).catch((err) => {
+    console.log("OOPS", err)
   });
 
   function addMessage(text, sender) {
