@@ -59,10 +59,16 @@ button {
   display: inline-block;
   padding: 10px;
   border-radius: 10px;
+  font: 10px Arial, sans-serif;
   margin: 5px;
   max-width: 70%;
   word-wrap: break-word;
   white-space: pre-wrap;
+}
+
+.chat-bubble pre {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .user {
@@ -72,7 +78,7 @@ button {
   border-bottom-right-radius: 0;
 }
 
-.bot {
+.assistant {
   background-color: green;
   color: white;
   align-self: flex-start;
