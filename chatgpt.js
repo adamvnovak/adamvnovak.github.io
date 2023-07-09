@@ -40,28 +40,62 @@ $(document).ready(function () {
 
   function addMessage(text, sender) {
     chatHistory.push({ role: sender, content: text });
-    const messageElement = document.createElement('div');
-    messageElement.classList.add('chat-bubble', sender);
-  
-    if (text.trim().startsWith('```') && text.trim().endsWith('```')) {
-      const code = text.trim().slice(3, -3); 
-      const preElem = document.createElement('pre');
-      const codeElem = document.createElement('code');
 
-      messageElement.appendChild(preElem);
-      preElem.appendChild(codeElem);
-  
-      codeElem.textContent = code;
-      hljs.highlightBlock(codeElem);
-      console.log("CODE", code)
-    } else {
-      messageElement.textContent = text;
-      console.log("REGULAR", text)
+    const messageParts = text.split('```');
+
+    let messageElement;
+    for (let i = 0; i < messageParts.length; i++) {
+        messageElement = document.createElement('div');
+        messageElement.classList.add('chat-bubble', sender);
+        
+        // If index is odd, this part is a code snippet
+        if (i % 2 === 1) {
+            const code = messageParts[i];
+            const preElem = document.createElement('pre');
+            const codeElem = document.createElement('code');
+            messageElement.appendChild(preElem);
+            preElem.appendChild(codeElem);
+            codeElem.textContent = code;
+
+            // Apply syntax highlighting, if the library is available
+            if (typeof hljs !== 'undefined') {
+                hljs.highlightBlock(codeElem);
+            }
+
+            console.log("CODE", code);
+        } else {
+            messageElement.textContent = messageParts[i];
+            console.log("REGULAR", messageParts[i]);
+        }
+        chatBox.append(messageElement);
     }
+    chatBox.scrollTop(chatBox[0].scrollHeight);
+}
+
+  // function addMessage(text, sender) {
+  //   chatHistory.push({ role: sender, content: text });
+  //   const messageElement = document.createElement('div');
+  //   messageElement.classList.add('chat-bubble', sender);
+  
+  //   if (text.trim().startsWith('```') && text.trim().endsWith('```')) {
+  //     const code = text.trim().slice(3, -3); 
+  //     const preElem = document.createElement('pre');
+  //     const codeElem = document.createElement('code');
+
+  //     messageElement.appendChild(preElem);
+  //     preElem.appendChild(codeElem);
+  
+  //     codeElem.textContent = code;
+  //     hljs.highlightBlock(codeElem);
+  //     console.log("CODE", code)
+  //   } else {
+  //     messageElement.textContent = text;
+  //     console.log("REGULAR", text)
+  //   }
       
-    chatBox.append(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
+  //   chatBox.append(messageElement);
+  //   chatBox.scrollTop(chatBox[0].scrollHeight);
+  // }
 
   async function sendRequestToOpenAI(text) {
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
