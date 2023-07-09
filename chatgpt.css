@@ -61,15 +61,13 @@ button {
   background-color: #4e9cff;
   color: white;
   align-self: flex-end;
-  order: 1;
   border-bottom-right-radius: 0;
 }
 
 .bot {
-  background-color: #f1f1f1;
-  color: #333;
+  background-color: green;
+  color: white;
   align-self: flex-start;
-  order: 2;
   border-bottom-left-radius: 0;
 }
 
