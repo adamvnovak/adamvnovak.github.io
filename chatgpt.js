@@ -25,6 +25,7 @@ const analytics = getAnalytics(app);
 const remoteConfig = getRemoteConfig(app);
 remoteConfig.settings.minimumFetchIntervalMillis = 0;
 var apikey = "";
+let chatHistory = [{ "role": "system", "content": "You are a helpful assistant. If the user asks for help with coding, you should think step by step, and offer the best code solution you know how." }]
 
 $(document).ready(function () {
   const chatBox = $("#chat-box");
@@ -42,6 +43,8 @@ $(document).ready(function () {
   });
 
   function addMessage(text, sender) {
+    chatHistory.push({ role: sender, content: text })
+
     const messageElement = document.createElement('div');
     messageElement.classList.add('chat-bubble', sender);
     messageElement.textContent = text;
@@ -58,10 +61,7 @@ $(document).ready(function () {
       },
       body: JSON.stringify({
           model: "gpt-4",
-          messages: [
-              { "role": "system", "content": "You are a math tutor." },
-              { "role": "user", "content": text },
-          ],
+          messages: chatHistory,
       }),
     });
     const data = await response.json();
@@ -80,11 +80,11 @@ $(document).ready(function () {
       addMessage(text, 'user');
       sendRequestToOpenAI(text)
           .then((responseText) => {
-              addMessage(responseText, 'bot');
+              addMessage(responseText, 'assistant');
           })
           .catch((error) => {
               console.error("Error:", error);
-              addMessage("An error occurred. Please try again later.", 'bot');
+              addMessage(`An error occurred: ${error}`, 'assistant');
           });
     }
   }
