@@ -25,7 +25,7 @@ const analytics = getAnalytics(app);
 const remoteConfig = getRemoteConfig(app);
 remoteConfig.settings.minimumFetchIntervalMillis = 0;
 var apikey = "";
-let chatHistory = [{ "role": "system", "content": "You are a helpful assistant. If the user asks for help with coding, you should think step by step, and offer the best code solution you know how." }]
+let chatHistory = [{ "role": "system", "content": "You are a helpful assistant. If the user asks for help with coding, you should think step by step, and offer complete code solutions when possible" }]
 
 $(document).ready(function () {
   const chatBox = $("#chat-box");
@@ -80,6 +80,7 @@ $(document).ready(function () {
       addMessage(text, 'user');
       sendRequestToOpenAI(text)
           .then((responseText) => {
+              console.log(responseText);
               addMessage(responseText, 'assistant');
           })
           .catch((error) => {
