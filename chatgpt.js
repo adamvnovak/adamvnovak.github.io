@@ -53,8 +53,10 @@ $(document).ready(function () {
   
       codeElem.textContent = code;
       hljs.highlightBlock(codeElem);
+      console.log("CODE", code)
     } else {
       messageElement.textContent = text;
+      console.log("REGULAR", text)
     }
       
     chatBox.append(messageElement);
