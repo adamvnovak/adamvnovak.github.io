@@ -76,6 +76,11 @@ $(document).ready(function () {
 }
 
   async function sendRequestToOpenAI(text) {
+    //while the combined length of all the chathistory object's content / 5 is greater than 8000, remove the first element of the array
+    while (chatHistory.map((x) => x.content).join("\n").length / 3 > 8000) {
+      chatHistory.shift();
+    }
+
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
