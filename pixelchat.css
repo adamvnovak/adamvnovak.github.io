@@ -1,0 +1,183 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.chivo-mono-font {
+  font-family: "Chivo Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "ChivoMono";
+  src: url(../public/ChivoMono-VariableFont_wght.ttf) 
+} */
+
+/* this prevents the white at the bottom and top of the webpage */
+body { 
+  background-color: #98B5BF; 
+}
+
+/* html, body, body > div, .app {
+  height: 100%;
+  width: 100%;
+} */
+
+.App {
+  background-color: #98B5BF;
+  text-align: center;
+  font-family: 'SF Pixelate', sans-serif;
+  font-variation-settings: "wght" 500;
+}
+
+.App-logo {
+  height: 200px;
+  pointer-events: none;
+}
+
+.App-header {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: white;
+}
+
+.Privacy-header {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(5px + 2vmin);
+  color: white;
+  max-width: 60vh;
+  margin: auto;
+  text-align: left;
+  padding: 2em;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-store-button {
+  height: 60px;
+  /* height: 6vmin; */
+}
+
+.linkcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qrcode {
+  margin-right: 20px; /* adjust as needed */
+  height: 100px;
+}
+
+.App-footer {
+  background-color: #98B5BF;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 1vmin);
+  color: white;
+
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+h1 {
+  /* font-size:xx-large; */
+  /* font-size:300%; */
+  /* font-size: 8vmin; */
+  /* font-weight: bold; */
+  font-variation-settings: "wght" 800;
+
+  margin-top: 0em;
+  margin-bottom: 0em;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 38px;
+  font-variation-settings: "wght" 600;
+  margin-top: 0.5em;
+  margin-bottom: 0em;
+  margin-left: 0;
+  margin-right: 0;
+
+  /* font-weight: bold; */
+}
+
+li{
+  font-size:20px;
+  margin-top:50px;
+ }
+
+h3 {
+  font-size: 22px;
+  font-variation-settings: "wght" 600;
+  margin-top: 2em;
+  margin-bottom: 0em;
+  margin-left: 0;
+  margin-right: 0;
+  /* font-size: large; */
+}
+
+h4 {
+  font-size: 18px;
+  margin-top: 2em;
+  margin-bottom: 0;
+  font-weight:normal;
+}
+
+h5 {
+  font-weight:normal;
+}
+
+p {
+  font-size: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  color: white;
+  opacity: 0.6;
+  margin-top: 0.5em;
+}
+
+h6 {
+  margin-top: 0.5em;
+  padding-top: 0em;
+  font-size: 18px;
+  opacity: 0.7;
+  font-variation-settings: "wght" 200;
+}
