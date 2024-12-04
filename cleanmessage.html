@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MP6H0NBVS1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=G-MP6H0NBVS1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
 
-      gtag('config', 'G-MP6H0NBVS1');
-    </script>
-    <!-- <meta http-equiv="refresh" content="0; url='https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip'" /> -->
+			gtag('config', 'G-MP6H0NBVS1');
+		</script>
+		<!-- <meta http-equiv="refresh" content="0; url='https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip'" /> -->
 
-    <script>
-      // JavaScript to open the URL in a new tab after a delay (2 seconds)
-      setTimeout(function() {
-        window.open('https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip', '_blank');
-      }, 1000);
-    </script>
+		<script>
+			// JavaScript to open the URL in a new tab after a delay (2 seconds)
+			//Considered a popup and blocked by browser because it's a window.open() funciton NOT called from a user callback
+			setTimeout(function () {
+				window.open('https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip', '_blank');
+			}, 1000);
+		</script>
 
-    <meta charset="UTF-8">
-    <meta property="og:title" content="Clean Message" />
-    <meta property="og:url" content="https:adamvnovak.com/cleanmessage" />
-    <meta property="og:image" content="https://www.adamvnovak.com/assets/cleanmessage-opengraph.png" />
-    <meta property="og:description" content="A less distracting way to text" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:site_name" content="Adam Novak" />
+		<meta charset="UTF-8" />
+		<meta
+			property="og:title"
+			content="Clean Message"
+		/>
+		<meta
+			property="og:url"
+			content="https://adamvnovak.com/cleanmessage"
+		/>
+		<meta
+			property="og:image"
+			content="https://www.adamvnovak.com/assets/cleanmessage-opengraph.png"
+		/>
+		<meta
+			property="og:description"
+			content="A less distracting way to text"
+		/>
+		<meta
+			property="og:locale"
+			content="en_US"
+		/>
+		<meta
+			property="og:site_name"
+			content="Adam Novak"
+		/>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="A less distracting way to text."/>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>" />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-  </head>
-  <body>
-    <p>If you aren't redirected automatically, click <a href="https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip" target="_blank">here</a>.</p>
-    <p>Using js: you aren't redirected automatically, click <a href="#" onclick="window.open('https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip'); return false;">here</a>.</p>
-  </body>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1"
+		/>
+		<meta
+			name="description"
+			content="A less distracting way to text."
+		/>
+		<link
+			rel="stylesheet"
+			href="index.css"
+		/>
+		<link
+			rel="icon"
+			href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>"
+		/>
+		<link
+			rel="apple-touch-icon"
+			href="%PUBLIC_URL%/logo192.png"
+		/>
+	</head>
+	<body>
+		<p>
+			If you aren't redirected automatically, click
+			<a
+				href="https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip"
+				target="_blank"
+				>here</a
+			>.
+		</p>
+		<p>
+			Using js: you aren't redirected automatically, click
+			<a
+				href="#"
+				onclick="window.open('https://appclip.apple.com/id?p=place.twotwotwo.twotwotwo-ios.Clip'); return false;"
+				>here</a
+			>.
+		</p>
+	</body>
 </html>
