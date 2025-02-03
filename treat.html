@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      function redirectUserToRelevantAppStore() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+        if (/iPad|iPhone|iPod|Macintosh/.test(userAgent) && !window.MSStream) {
+          window.location.href =
+            "https://apps.apple.com/us/app/pixelchat/id6741377501";
+        } else {
+          window.location.href =
+            "https://play.google.com/store/apps/details?id=APP_ID";
+        }
+      }
+
+      setTimeout(redirectUser, 500);
+    </script>
+
+    <meta charset="UTF-8" />
+    <meta property="og:title" content="Treat" />
+    <meta property="og:url" content="https://adamvnovak.com/treat" />
+    <meta
+      property="og:description"
+      content="Treat your health, treat yourself"
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Treat" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="Treat your healht, treat yourself" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <p>
+      If you aren't redirected automatically, click
+      <a href="#" onclick="redirectUserToRelevantAppStore(); return false;"
+        >here</a
+      >.
+    </p>
+  </body>
+</html>
